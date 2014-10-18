@@ -1,0 +1,14 @@
+mode: development
+media_root: assets
+media_url: /assets
+base_url: /
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+context:
+    data:
+        tweet_via: harry_reeder
+meta:
+    created: !!timestamp 2010-01-01 00:00:00
+    author: Harry Reeder
+    description: harryreeder.co.uk
+    version: 0.1

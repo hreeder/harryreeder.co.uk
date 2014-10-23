@@ -11,13 +11,6 @@ body {
     font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #3A3A3A;
 }
-a {
-    text-decoration: none;
-    color: #3A3A3A;
-}
-a:hover {
-    text-decoration: underline;
-}
 
 .container {
     margin-left: auto;

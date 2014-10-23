@@ -1,0 +1,40 @@
+{% import "macros.j2" as macros with context %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Harry Reeder{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/harryreeder.css">
+</head>
+<body>
+	<div class="container">
+		{# Begin Nav & Header Bar #}
+		<div id="head" class="row">
+			<div class="col-md-4">
+				<span class="title">HARRY REEDER</span>
+			</div>
+
+			<div class="col-md-8">
+				<nav class="navbar">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+							<span>MENU</span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse navbar-responsive-collapse">
+						<ul class="nav nav-pills navbar-nav navbar-right">
+							{{ macros.render_navbar() }}
+							<li><a href="http://blog.harryreeder.co.uk/">BLOG</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+        {% filter markdown -%}
+        {% block main %}{% endblock %}
+        {%- endfilter %}
+	</div>
+</body>
+</html>

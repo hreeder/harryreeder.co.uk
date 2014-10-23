@@ -1,0 +1,5 @@
+{% macro render_navbar() -%}
+{% for menu_item in menu %}
+	<li{% if (menu_item.url == resource.relative_path) %} class="active" {% endif -%}><a href="{{ content_url(menu_item.url) }}">{{ menu_item.title }}</a></li>
+{% endfor %}
+{%- endmacro %}

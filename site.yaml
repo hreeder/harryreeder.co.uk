@@ -7,6 +7,13 @@ plugins:
 context:
     data:
         tweet_via: harry_reeder
+        menu:
+          - title: HOME
+            url: index.html
+          - title: PROJECTS
+            url: projects.html
+          - title: CONTACT
+            url: contact.html
 meta:
     created: !!timestamp 2010-01-01 00:00:00
     author: Harry Reeder
